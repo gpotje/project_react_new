@@ -1,0 +1,4 @@
+criar com expo 
+npx create-expo expo-app
+npx expo start
+yarn add expo
