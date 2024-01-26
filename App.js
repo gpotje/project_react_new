@@ -4,6 +4,20 @@ npx create-expo expo-app
 npx expo start
 yarn add expo
 
+asyncStore(cache)
+npx expo install @react-native-async-storage/async-storage
+
+axios
+npm install axios --save
+
+
+navigation
+npx expo install @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+npx expo install @react-navigation/native-stack
+
+firebase
+npx expo install firebase
  */
 
 
@@ -15,19 +29,13 @@ import {
 } from 'react-native';
 
 
-class App extends Component{
+export default function App(){
+  return(
+    <View style={styles.container}>
+      <Text style={styles.texto}> Ola mundo </Text>
+    </View>
+  );
 
-  render(){
-    return(
-      <View style={styles.container}>
-
-        <Text>Ola mundo</Text>
-
-
-      </View>
-
-    );
-  }
 }
 
 const styles = StyleSheet.create({
@@ -38,7 +46,9 @@ const styles = StyleSheet.create({
       justifyContent:'center',
       backgroundColor: '#00aeef'
     },
+    texto:{
+      fontSize:50
+    }
   
 });
 
-export default App;
