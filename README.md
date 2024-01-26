@@ -1,5 +1,5 @@
 # criar com expo 
-npx create-expo expo-app
+npx create-expo expo-app <br/>
 npx expo start
 
 # asyncStore(cache)
