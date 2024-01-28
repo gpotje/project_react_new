@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import { NativeBaseProvider, Box,  } from "native-base";
 import { 
-  Text, 
-  View, 
-  StyleSheet,
+View, 
+StyleSheet
 } from 'react-native';
 
 
 export default function App(){
-  return(
+  return (
     <View style={styles.container}>
-      <Text style={styles.texto}> Ola mundo </Text>
+        <NativeBaseProvider>
+          <Box>Hello world</Box>
+        </NativeBaseProvider>
     </View>
   );
 
@@ -17,15 +19,12 @@ export default function App(){
 
 const styles = StyleSheet.create({
   
-    container:{
-      flex:1,
-      alignItems:'center',
-      justifyContent:'center',
-      backgroundColor: '#00aeef'
-    },
-    texto:{
-      fontSize:50
-    }
-  
-});
+  container:{
+    flex:1,
+    marginTop:50,
+    alignItems:'center',
+    justifyContent:'flex-end',
+    backgroundColor: '#00aeef'
+  },
 
+});
