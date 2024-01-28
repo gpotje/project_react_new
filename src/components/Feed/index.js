@@ -24,7 +24,7 @@ export default function Feed({data}) {
         </Box>
         <Box marginY={1}
         flexDirection="row"
-        paddingRight={10}
+        
         >
 
             <Icon 
