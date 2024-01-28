@@ -24,10 +24,13 @@ npx eas build --platform android
 
 
 # NativeBase
-npm install native-base
-npx expo install react-native-svg@12.1.1
-npx expo install react-native-safe-area-context@3.3.2
+npm install native-base<br/>
+npx expo install react-native-svg@12.1.1<br/>
+npx expo install react-native-safe-area-context@3.3.2<br/>
 # yarn NativeBase
-yarn add native-base
-expo install react-native-svg@12.1.1
-expo install react-native-safe-area-context@3.3.2
+yarn add native-base<br/>
+expo install react-native-svg@12.1.1<br/>
+expo install react-native-safe-area-context@3.3.2<br/>
+
+# gradiente
+npx expo install expo-linear-gradient<br/>
