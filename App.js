@@ -10,13 +10,12 @@ import { NativeBaseProvider, Box } from "native-base";
  */
 
 import React, { Component } from 'react';
-import { NativeBaseProvider, Box,Input,Stack,extendTheme } from "native-base";
 import { 
  View, 
  Text,
   StyleSheet,
 } from 'react-native';
-import firebase from './src/fireBaseConnection';
+
 
 
 class App extends Component{
@@ -25,16 +24,10 @@ class App extends Component{
     return(
       
       <View  style={styles.container}>
-          <NativeBaseProvider>
-              <Stack direction="column" mb="" mt="1.5" space={3}>
-                  <Input size="2xl" placeholder="2xl Input" />
-              </Stack>
-              <Box>
-                óla mundo
-              </Box>
+         
+           <Text>Olá mundo</Text>
               
-          </NativeBaseProvider>
-     
+        
 
       </View>
        
@@ -49,8 +42,9 @@ const styles = StyleSheet.create({
   
     container:{
       flex:1,
+    
+      marginTop:10,
       justifyContent:"center",
-      marginTop:40
 
     },
   
