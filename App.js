@@ -1,32 +1,18 @@
-import React, { Component } from 'react';
-import { NativeBaseProvider, Box,  } from "native-base";
-import { 
-View, 
-StyleSheet
-} from 'react-native';
-import Cart from './src/pages/Cart';
-import Home from './src/pages/Home';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { NativeBaseProvider, Box } from "native-base";
+
+import Routes from './src/routes/index';
 
 
 export default function App(){
   return (
-    <View style={styles.container}>
-        <NativeBaseProvider>
-        <Home></Home>
-        </NativeBaseProvider>
-    </View>
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <StatusBar style="auto"/>
+        <Routes />
+      </NavigationContainer>
+    </NativeBaseProvider>
   );
 
 }
-
-const styles = StyleSheet.create({
-  
-  container:{
-    flex:1,
-    marginTop:50,
-    alignItems:'center',
-    justifyContent:'flex-end',
-    backgroundColor: '#00aeef'
-  },
-
-});
