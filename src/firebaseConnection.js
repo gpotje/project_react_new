@@ -1,8 +1,7 @@
-import { firebase } from "firebase/app";
-import 'firebase/database'
+import { initializeApp } from 'firebase/app';
 
 
-let firebaseConfig = {
+const  firebaseConfig = {
   apiKey: "AIzaSyCUbE348so9owd0nTokggpUm8BMxX9Idbk",
   authDomain: "aulafirebase-3c7b2.firebaseapp.com",
   projectId: "aulafirebase-3c7b2",
@@ -12,9 +11,6 @@ let firebaseConfig = {
   measurementId: "G-DV96RZ4YFJ"
 };
 
-if(!firebase.apps.length){
-  firebase.initializeApp(firebaseConfig);
-}
-
+const app = initializeApp(firebaseConfig);
 
 
