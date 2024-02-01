@@ -10,8 +10,10 @@ npm install axios --save
 
 # navigation
 npx expo install @react-navigation/native<br/>
-npx expo install react-native-screens<br/>
+npx expo install react-native-screens react-native-safe-area-context<br/>
 npx expo install @react-navigation/native-stack<br/>
+
+npx expo install react-native-screens<br/>
 npx expo install @react-navigation/bottom-tabs<br/>
 
 # firebase

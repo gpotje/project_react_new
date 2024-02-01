@@ -4,13 +4,15 @@ import {
 View, 
 StyleSheet
 } from 'react-native';
+import Cart from './src/pages/Cart';
+import Home from './src/pages/Home';
 
 
 export default function App(){
   return (
     <View style={styles.container}>
         <NativeBaseProvider>
-          <Box>Hello world</Box>
+        <Home></Home>
         </NativeBaseProvider>
     </View>
   );
