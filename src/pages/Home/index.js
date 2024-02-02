@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {  Box, Pressable, FlatList, Text  } from "native-base";
 import { Feather } from '@expo/vector-icons'
+import Product from '../../component/product';
 
 export default function Home(){
 
@@ -40,9 +41,7 @@ export default function Home(){
           <Box alignItems="center" backgroundColor="#FC0303" justifyContent="center"
           w={5} h={5} borderRadius={10} position="absolute" zIndex={99}
           bottom={-2} left={-4} fontSize={11}
-          >
-            99
-            </Box>
+          >99</Box>
           <Box>
             <Feather 
             name='shopping-cart'
@@ -52,6 +51,14 @@ export default function Home(){
           </Box>
       </Pressable>
       </Box>  
+      
+      <FlatList 
+      marginY={5}
+      data={products}
+      keyExtractor={ (item) => String(item.id) }
+      renderItem={({item}) => <Product data={item}/>}
+      />
+
     </Box>
   );
 
