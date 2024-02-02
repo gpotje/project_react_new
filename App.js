@@ -9,7 +9,7 @@ export default function App(){
   return (
     <NativeBaseProvider>
       <NavigationContainer>
-        <StatusBar style="auto"/>
+        <StatusBar backgroundColor="#Fafafa" />
         <Routes />
       </NavigationContainer>
     </NativeBaseProvider>
