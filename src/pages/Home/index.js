@@ -7,7 +7,7 @@ import { CartContext } from '../../context/CartContext';
 
 export default function Home(){
 
-  const { cart } = useContext(CartContext)
+  const { cart,addItemCart } = useContext(CartContext)
 
   const navigation = useNavigation();
   
@@ -39,6 +39,10 @@ export default function Home(){
     },
   ])
 
+  function handleAddcart(item){
+    addItemCart(item)
+  }
+
   return (
     <Box flex={1} safeArea backgroundColor="#fafafa" paddingY={14}> 
       <Box flexDirection="row" justifyContent="space-between" alignItems="center" paddingX={5}>
@@ -63,7 +67,7 @@ export default function Home(){
       marginY={5}
       data={products}
       keyExtractor={ (item) => String(item.id) }
-      renderItem={({item}) => <Product data={item}/>}
+      renderItem={({item}) => <Product data={item} addToCart={() => handleAddcart(item)} />}
       />
 
     </Box>

@@ -4,7 +4,7 @@ import { FontAwesome6  } from '@expo/vector-icons'
 
 
 
-export default function Product({data}){
+export default function Product({data, addToCart}){
   return (
 
     <Box borderWidth={1} borderRadius={2} w="90%"
@@ -19,7 +19,9 @@ export default function Product({data}){
           <Box flexDirection="row"> R$:{data.price}</Box>
         </Box>
         <Box>
-          <Button backgroundColor="#168fff" paddingX={6}>
+          <Button backgroundColor="#168fff" paddingX={6}
+          onPress={addToCart}
+          >
             +
           </Button>
         </Box>
